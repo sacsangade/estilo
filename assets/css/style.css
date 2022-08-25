@@ -1,0 +1,358 @@
+/*
+Theme Name: Estilo Interiors
+Author: Sachin Sangade
+Author URI: https://www.linkedin.com/in/sachin-sangade-443bab51/
+Description: Interior website.
+Version: 1.0.0
+*/
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. Preloader
+3. Pages
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 1. Theme default css
+* ----------------------------------------------------------------------------------------
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+    -webkit-font-smoothing: antialiased;
+    /* WebKit  */
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SpaceGroteskMedium';
+    font-size: 16px;
+    color:#000000;
+  }
+  h1 {
+    font-size: 84px;
+    line-height: 90px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 1.3380952381;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 1.3833333333;
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 1.3380952381;
+  }
+  h5 {
+    font-size: 24px;
+    line-height: 1.3380952381;
+  }
+  h6 {
+    font-size: 20px;
+    line-height: 1.2380952381;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000000;
+    font-weight: 700;
+  }
+  p {
+    color: #333333;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 10px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+  }
+  a:hover {
+    color: #999999;
+  }
+  img {
+    max-width: 100%;
+  }
+  button:hover,
+  button:active,
+  button:focus {
+    outline: 0;
+  }  
+  /*input and button type focus outline disable*/
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+textarea:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ddd;
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    -webkit-clip-path: none;
+            clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 15px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+  }
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+    outline: 0;
+  }
+  .btn{
+    font-size: 22px;
+
+    color: #FFF;
+  }
+  
+/*
+* ----------------------------------------------------------------------------------------
+* 2. Preloader
+* ----------------------------------------------------------------------------------------
+*/
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #252525;
+  z-index: 99;
+}
+.preloader .box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+.preloader .loader {
+  height: 5px;
+  width: 5px;
+  color: #FFFFFF;
+  box-shadow: -10px -10px 0 5px,
+              -10px -10px 0 5px,
+              -10px -10px 0 5px,
+              -10px -10px 0 5px;
+  animation: loader-38 6s infinite;
+  position:absolute;
+  z-index: 999;
+}
+@keyframes loader-38 {
+  0% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px;
+  }
+  8.33% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px -10px 0 5px;
+  }
+  16.66% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px;
+  }
+  24.99% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  33.32% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px -10px 0 5px;
+  }
+  41.65% {
+    box-shadow: 10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px -10px 0 5px;
+  }
+  49.98% {
+    box-shadow: 10px 10px 0 5px,
+              10px 10px 0 5px,
+              10px 10px 0 5px,
+              10px 10px 0 5px;
+  }
+  58.31% {
+    box-shadow: -10px 10px 0 5px,
+                -10px 10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  66.64% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  74.97% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  83.3% {
+    box-shadow: -10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  91.63% {
+    box-shadow: -10px -10px 0 5px,
+                -10px 10px 0 5px,
+                -10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  100% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px;
+  }
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 3. Pages
+* ----------------------------------------------------------------------------------------
+*/
+body
+{
+  background: #252525;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.background .line {
+  position: fixed;
+  top:0px;
+  bottom: 0px;
+  width:1px;
+  background: #63DEC1;
+  opacity: 0.20;
+}
+.background .line1 {
+  left: 25%;
+}
+.background .line2 {
+  left:50%;
+}
+.background .line3 {
+  left:75%;
+}
+.logo {
+  text-align: center;
+  margin-top: 6%;
+}
+.main
+{
+  position: relative;
+  z-index: 99;
+}
+.demo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.demo-wrap .demo:hover .image
+{
+  top:-20px;
+}
+.demo-wrap .image
+{
+  position: relative;
+  top:0px;
+  -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.demo-wrap .title
+{
+  font-size: 36px;
+  color: #FFF;
+  margin-top: -68px;
+  font-weight: 500;
+}

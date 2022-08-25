@@ -1,0 +1,801 @@
+/*
+Theme Name: Estilo Interiors
+Author: Sachin Sangade
+Author URI: https://www.linkedin.com/in/sachin-sangade-443bab51/
+Description: Interior website.
+Version: 1.0.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. Preloader
+3. Header
+4. Pages
+5. Footer
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 1. Theme default css
+* ----------------------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: 'SpaceGroteskBold';
+  src: url('../fonts/SpaceGroteskBold.eot');
+  src: url('../fonts/SpaceGroteskBold.eot') format('embedded-opentype'),
+       url('../fonts/SpaceGroteskBold.woff2') format('woff2'),
+       url('../fonts/SpaceGroteskBold.woff') format('woff'),
+       url('../fonts/SpaceGroteskBold.ttf') format('truetype'),
+       url('../fonts/SpaceGroteskBold.svg#SpaceGroteskBold') format('svg');
+}
+@font-face {
+  font-family: 'SpaceGroteskSemiBold';
+  src: url('../fonts/SpaceGroteskSemiBold.eot');
+  src: url('../fonts/SpaceGroteskSemiBold.eot') format('embedded-opentype'),
+       url('../fonts/SpaceGroteskSemiBold.woff2') format('woff2'),
+       url('../fonts/SpaceGroteskSemiBold.woff') format('woff'),
+       url('../fonts/SpaceGroteskSemiBold.ttf') format('truetype'),
+       url('../fonts/SpaceGroteskSemiBold.svg#SpaceGroteskSemiBold') format('svg');
+}
+@font-face {
+  font-family: 'SpaceGroteskMedium';
+  src: url('../fonts/SpaceGroteskMedium.eot');
+  src: url('../fonts/SpaceGroteskMedium.eot') format('embedded-opentype'),
+       url('../fonts/SpaceGroteskMedium.woff2') format('woff2'),
+       url('../fonts/SpaceGroteskMedium.woff') format('woff'),
+       url('../fonts/SpaceGroteskMedium.ttf') format('truetype'),
+       url('../fonts/SpaceGroteskMedium.svg#SpaceGroteskMedium') format('svg');
+}
+@font-face {
+  font-family: 'SpaceGroteskRegular';
+  src: url('../fonts/SpaceGroteskRegular.eot');
+  src: url('../fonts/SpaceGroteskRegular.eot') format('embedded-opentype'),
+       url('../fonts/SpaceGroteskRegular.woff2') format('woff2'),
+       url('../fonts/SpaceGroteskRegular.woff') format('woff'),
+       url('../fonts/SpaceGroteskRegular.ttf') format('truetype'),
+       url('../fonts/SpaceGroteskRegular.svg#SpaceGroteskRegular') format('svg');
+}
+@font-face {
+  font-family: 'SpaceGroteskLight';
+  src: url('../fonts/SpaceGroteskLight.eot');
+  src: url('../fonts/SpaceGroteskLight.eot') format('embedded-opentype'),
+       url('../fonts/SpaceGroteskLight.woff2') format('woff2'),
+       url('../fonts/SpaceGroteskLight.woff') format('woff'),
+       url('../fonts/SpaceGroteskLight.ttf') format('truetype'),
+       url('../fonts/SpaceGroteskLight.svg#SpaceGroteskLight') format('svg');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+    -webkit-font-smoothing: antialiased;
+    /* WebKit  */
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SpaceGroteskMedium';
+    font-size: 16px;
+    color:#000000;
+  }
+  h1 {
+    font-size: 84px;
+    line-height: 90px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 1.3380952381;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 1.3833333333;
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 1.3380952381;
+  }
+  h5 {
+    font-size: 24px;
+    line-height: 1.3380952381;
+  }
+  h6 {
+    font-size: 20px;
+    line-height: 1.2380952381;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000000;
+    font-weight: 700;
+  }
+  p {
+    color: #333333;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 10px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+  }
+  a:hover {
+    color: #63DEC1;
+  }
+  img {
+    max-width: 100%;
+  }
+  button:hover,
+  button:active,
+  button:focus {
+    outline: 0;
+  }  
+  /*input and button type focus outline disable*/
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+textarea:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #ddd;
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    -webkit-clip-path: none;
+            clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 15px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+  }
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+    outline: 0;
+  }
+  .btn{
+    font-size: 22px;
+    font-family: 'SpaceGroteskRegular';
+    color: #FFF;
+  }
+  .btn-withborder
+  {
+    border:2px solid #FFF;
+    border-radius: 0px;
+    padding: 15px 20px;
+  }
+  .btn-borderbottom
+  {
+    border-bottom: 5px solid #63DEC1;
+    color: #FFF;
+    border-radius: 0px;
+  }
+  .btn-primary {
+    background: #000000;
+    border-radius: 0px;
+    font-family: 'SpaceGroteskRegular';
+    color: #FFF;
+    font-size: 20px;
+    border: 2px solid #000000;
+    padding: 15px 30px;
+  } 
+  .btn-primary:hover
+  {
+    background: #63DEC1;
+    color:#FFFFFF;
+    border: 2px solid #63DEC1;
+  }
+ .margin-top-24{
+  margin-top: 24px !important;
+ }
+ 
+/*
+* ----------------------------------------------------------------------------------------
+* 2. Preloader
+* ----------------------------------------------------------------------------------------
+*/
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #252525;
+  z-index: 99;
+}
+.preloader .box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+.preloader .loader {
+  height: 5px;
+  width: 5px;
+  color: #FFFFFF;
+  box-shadow: -10px -10px 0 5px,
+              -10px -10px 0 5px,
+              -10px -10px 0 5px,
+              -10px -10px 0 5px;
+  animation: loader-38 6s infinite;
+  position:absolute;
+  z-index: 999;
+}
+@keyframes loader-38 {
+  0% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px;
+  }
+  8.33% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px -10px 0 5px;
+  }
+  16.66% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px;
+  }
+  24.99% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  33.32% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px -10px 0 5px;
+  }
+  41.65% {
+    box-shadow: 10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px -10px 0 5px;
+  }
+  49.98% {
+    box-shadow: 10px 10px 0 5px,
+              10px 10px 0 5px,
+              10px 10px 0 5px,
+              10px 10px 0 5px;
+  }
+  58.31% {
+    box-shadow: -10px 10px 0 5px,
+                -10px 10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  66.64% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  74.97% {
+    box-shadow: -10px -10px 0 5px,
+                10px -10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  83.3% {
+    box-shadow: -10px -10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  91.63% {
+    box-shadow: -10px -10px 0 5px,
+                -10px 10px 0 5px,
+                -10px 10px 0 5px,
+                -10px 10px 0 5px;
+  }
+  100% {
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px;
+  }
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 3. Header
+* ----------------------------------------------------------------------------------------
+*/  
+
+header {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  padding-top: 60px;
+  background: #262525;
+  padding-bottom: 60px;
+  z-index: 3;
+}
+header .btn-withborder:hover
+{
+  color: #63DEC1;
+  border: 2px solid #63DEC1;
+}
+header .nav li a {
+  font-family: 'SpaceGroteskRegular';
+  font-size: 22px;
+  color:#FFF;
+  padding: 0px;
+  -webkit-transition: 0.4s;
+transition: 0.4s;
+}
+header .nav li a:hover
+{
+  color: #63DEC1;
+}
+header .nav li {
+  margin-right: 22px;
+  margin-left: 22px;
+}
+header .nav li:first-child {
+  margin-left: 0px;
+}
+header .nav li:last-child {
+  margin-right: 0px;
+}
+header  .btn-withborder {
+   margin-left: 44px;
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 4. Pages
+* ----------------------------------------------------------------------------------------
+*/
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.head .title {
+  font-size: 80px;
+  font-family: 'SpaceGroteskRegular';
+  flex-grow: 9;
+  margin: 0px;
+}
+.head .btn-borderbottom {
+  color: #000000;
+  font-size: 30px;
+  border-bottom: 5px solid #000000;
+  flex-grow: 1;
+}
+.head .btn-borderbottom:hover {
+  color:#63DEC1;
+  border-bottom: 5px solid #63DEC1;
+}
+.image.zoom-out-effect {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+}
+.image.zoom-out-effect .hover {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top:0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  background: rgba(21, 21, 21, 0.9);
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.image.zoom-out-effect img {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+}
+.image.zoom-out-effect:hover .hover {
+  display: block;
+}
+.image.zoom-out-effect:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.image.zoom-out-effect .hover span {
+  color: #63DEC1;
+  font-size: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 25px;
+  height: 30px;
+  line-height: 30px;
+}
+figure {
+  margin: 0px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 4.1 Home
+* ----------------------------------------------------------------------------------------
+*/
+.slider {
+  padding-top: 277px;
+  background: #262525;
+}
+.slider .title {
+  font-size: 80px;
+  color: #FFF;
+  font-family: 'SpaceGroteskRegular';
+  margin: 0px;
+}
+.slider .btn-borderbottom {
+  margin-top: 60px;
+  margin-bottom: 150px;
+  font-size:30px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.btn-play span {
+  display: block;
+  width: 140px;
+  height: 140px;
+  background: rgba(21,21,21,0.80);
+  border-radius: 100%;
+  line-height: 140px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 3;
+}
+.btn-play::after {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 5px solid rgba(21, 21, 21, 0.3);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: 1;
+}
+.btn-play::before {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 5px solid rgba(21, 21, 21, 0.3);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+  z-index: 1;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
+}
+.slider .btn-borderbottom:hover
+{
+   color:#63DEC1;
+   border-bottom:5px solid #FFFFFF;
+}
+.slider .video .btn-play {
+  width:192px;
+  height: 192px;
+  border-radius: 100%;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  position: absolute;
+top: 0px;
+bottom: 0px;
+right: 0px;
+left: 0px;
+margin: auto;
+z-index: 2;
+}
+.slider .video .btn-play:hover span {
+  background: #63DEC1;
+}
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.about .about-image {
+  position: absolute;
+  right: 0px;
+  top: 150px;
+  z-index: 1;
+}
+
+.about .title {
+  font-size: 50px;
+  background: #FFF;
+  padding: 50px;
+  position: relative;
+  margin-top: 100px;
+  z-index: 2;
+  padding-left: 0px;
+}
+.about .logo {
+  width:70%;
+  margin-top: 60px;
+  padding-bottom: 24px;
+}
+.testimonials
+{
+  margin-bottom: 150px;
+}
+.testimonials .content
+{
+  font-size: 30px;
+}
+.testimonials .author
+{
+  font-size: 30px;
+  margin-top: 30px;
+}
+.what-we-do
+{
+background:#262525;
+padding-top: 150px;
+padding-bottom: 150px;
+}
+.showcase .title
+{
+  font-size: 50px;
+  padding-top: 70px;
+}
+.showcase .title span
+{
+  border-bottom: 5px solid #000000;
+}
+.showcase .top-right {
+  position: absolute;
+  right: 0px;
+  width: 40%;
+  top:0px
+}
+.showcase .bottom-part
+{
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.what-we-do .title
+{
+  font-size: 50px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+.what-we-do p
+{
+  font-size: 30px;
+  color: #FFFFFF;
+}
+.work
+{
+  margin-bottom: 60px;
+}
+#blog-carousel
+{
+  margin-bottom: 150px;
+}
+#blog-carousel .name a,
+#work-carousel .name a
+{
+   font-size: 28px;
+   padding: 40px;
+   display: block;
+}
+
+.client-logo
+{
+  margin-bottom: 80px;
+}
+.owl-carousel.off {
+  display: block;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 5. Footer
+* ----------------------------------------------------------------------------------------
+*/  
+footer {
+  background: #262525;
+  padding-top: 120px;
+  padding-bottom: 20px;
+}
+footer .widget .title {
+  font-size: 30px;
+  font-family: 'SpaceGroteskBold';
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+footer .widget ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+footer .widget ul li {
+  margin-bottom: 10px;
+}
+footer .widget ul li a {
+  font-family: 'SpaceGroteskRegular';
+  font-size: 30px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+footer .widget ul li a:hover
+{
+  color: #63DEC1;
+  border-bottom: 1px solid #63DEC1;
+}
+footer .widget address {
+  font-family: 'SpaceGroteskRegular';
+  font-size: 30px;
+  color:#FFFFFF;
+}
+footer .widget .phone-no {
+  font-family: 'SpaceGroteskRegular';
+  font-size: 30px;
+  color:#FFFFFF;
+}
+footer .copyright {
+  margin-top: 150px;
+}
+footer .copyright .footer-link {
+  font-size: 18px;
+  font-family: 'SpaceGroteskRegular';
+  color: #FFFFFF;
+}
+footer .copyright .footer-link:hover {
+  color: #63DEC1;
+}
+footer .copyright .footer-content {
+  font-size: 18px;
+  font-family: 'SpaceGroteskRegular';
+  color: #FFFFFF;
+  margin-top: 12px;
+}

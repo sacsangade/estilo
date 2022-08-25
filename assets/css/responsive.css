@@ -1,0 +1,257 @@
+/* CSS Index
+-----------------------------------
+1. Extra extra large
+2. Extra large
+3. Large (Desktop)
+4. Medium (Ipad, Tablet)
+5. X-Small & Small (Mobile) 
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 4. Medium (Ipad, Tablet)
+* ---------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 5. X-Small & Small (Mobile)
+* ----------------------------------------------------------------------------------------
+*/
+
+@media (min-width:320px) and (max-width:767px)
+{
+  .navbar-brand {
+    width: 150px;
+  }
+  .main-menu {
+    display: block !important;
+    position: fixed;
+    width: 280px;
+    top:0px;
+    bottom: 0px;
+    right: -280px;
+    background: #000000;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .main-menu.open {
+    right: 0px;
+  }
+  .main-menu .btn-close a {
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    opacity: 0.40;
+  }
+  .main-menu .btn-close a:hover {
+    opacity: 1;
+  }
+  .main-menu ul {
+    padding: 80px 50px;
+  }
+  .main-menu ul li {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+  .main-menu ul li a {
+    font-size: 22px;
+  }
+  header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .btn-menu {
+    width: 52px;
+    height: 52px;
+    display: block;
+    border: 1px solid #FFFFFF;
+    margin-right: 0px;
+    margin-left: auto;
+    border-radius: 100%;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .btn-menu:hover {
+    opacity: 0.50;
+  }
+  .btn-menu .box {
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  }
+  .btn-menu span {
+    height: 1px;
+    background: #FFFFFF;
+    width: 25px;
+    display: block;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .btn-menu:hover span {
+    width: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    opacity: 0.50;
+  }
+  .btn-menu span:first-child,
+  .btn-menu span:last-child {
+    width:15px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .btn-menu:hover span:first-child,
+  .btn-menu:hover span:last-child {
+    width:25px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .about .title {
+    font-size: 28px;
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .about .about-image {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .about .logo {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 80px;
+  }
+  .about .btn-primary {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .testimonials {
+    margin-bottom: 80px;
+  }
+  .testimonials .content {
+    font-size: 22px;
+  }
+  .testimonials .author {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  #blog-carousel .name a, #work-carousel .name a {
+    font-size: 22px;
+    padding: 20px;
+  }
+  .showcase .top-right {
+    position: relative;
+    right: 0px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  .showcase .empty
+  {
+    display: none;
+  }
+  .showcase .bottom-part {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .showcase .title {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .what-we-do {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .what-we-do .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .what-we-do p {
+    font-size: 22px;
+  }
+  .slider {
+    padding-top: 135px;
+  }
+  .slider .title {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  .slider .video .btn-play {
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+  }
+  .head .title {
+    font-size: 28px;
+  }
+  .head .title img {
+    width: 30px;
+  }
+  .head .btn-borderbottom {
+    font-size: 18px;
+  }
+  #blog-carousel {
+    margin-bottom: 80px;
+  }
+  #blog-carousel .name a {
+    font-size: 22px;
+    padding: 30px;
+  }
+  #client-logo-carousel .item {
+    width: 49%;
+    display: inline-block;
+  }
+  footer {
+    padding-top: 80px;
+    padding-bottom: 10px;
+  }
+  footer .widget ul li a {
+    font-size: 22px;
+  }
+  footer .copyright {
+    margin-top: 30px;
+  }
+  footer .widget .title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  footer .widget address {
+    font-size: 22px;
+  }
+  footer .widget .phone-no {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width:577px) and (max-width:767px)
+{
+  .form {
+    width: 400px;
+  }
+}
